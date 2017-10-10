@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ProduseEco.Models;
 using ProduseEco.ViewModel;
-
+using ClientApp.Infrastructure;
+using ClientApp.Infrastructure.Models;
 
 namespace ProduseEco.Controllers
 {
     public class ClientController : Controller
     {
-[HttpGet]
+        private IClientRepository repository;
+
+        public ClientController()
+        {
+            this.repository = new ClientRepository();
+        }
+
+        public ClientController(IClientRepository clientRepository)
+        {
+            this.repository = clientRepository;
+        }
+
+        [HttpGet]
 
         public ActionResult AddOrEdit(int Id=0 )
         {
@@ -20,19 +32,19 @@ namespace ProduseEco.Controllers
         }
         [HttpPost]
         public ActionResult AddOrEdit(ClientViewModel clientModel)
-        { 
+        {
 
-            using (masterEntities2 dbModel = new masterEntities2())
-            {  if (dbModel.Clients.Any(x => x.Username == clientModel.Username)) {
 
-                    ViewBag.DuplicateMessage = "Username already exit.";
-                    return View("AddOrEdit", clientModel);
-                }
-                Client client = ClientViewModelToClient(clientModel);
-                dbModel.Clients.Add(client);
-                dbModel.SaveChanges();
-
+            Client dbClient = repository.FindByUsername(clientModel.Username);
+            if(dbClient != null) { 
+                ViewBag.DuplicateMessage = "Username already exit.";
+                return View("AddOrEdit", clientModel);
             }
+            Client client = ClientViewModelToClient(clientModel);
+
+            repository.Add(client);
+
+            
             ModelState.Clear();
             ViewBag.SuccessMessage = "registration successful";
             return View("AddOrEdit", new ClientViewModel());

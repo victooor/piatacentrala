@@ -3,13 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ProduseEco.Models;
 using ProduseEco.ViewModel;
+using ClientApp.Infrastructure;
+using ClientApp.Infrastructure.Models;
 
 namespace ProduseEco.Controllers
 {
     public class LoginController : Controller
     {
+        private IClientRepository repository;
+
+        public LoginController()
+        {
+            this.repository = new ClientRepository();
+        }
+
+        public LoginController(IClientRepository clientRepository)
+        {
+            this.repository = clientRepository;
+        }
         // GET: Login
         public ActionResult Index()
         {
@@ -22,9 +34,9 @@ namespace ProduseEco.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (masterEntities2 lg = new masterEntities2())
-                {
-                    var v = lg.Clients.Where(a => a.Username.Equals(login.Username) && a.Password.Equals(login.Password)).FirstOrDefault();
+
+                    var v = repository.FindByUsernameAndPass(login.Username, login.Password);
+                    //lg.Clients.Where(a => a.Username.Equals(login.Username) && a.Password.Equals(login.Password)).FirstOrDefault();
 
                     if (v != null)
                     {
@@ -32,7 +44,7 @@ namespace ProduseEco.Controllers
                         Session["LogedUserFullname"] = v.Username.ToString();
                         return RedirectToAction("AfterLogin");
                     }
-                }
+                
             }
             return View(login);
         }

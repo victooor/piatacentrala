@@ -57,3 +57,5 @@ C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ProduseEco\bin\
 C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ProduseEco\bin\Newtonsoft.Json.xml
 C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ProduseEco\bin\System.Web.Optimization.xml
 C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ProduseEco\obj\Debug\ProduseEco.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ProduseEco\bin\ClientApp.Infrastructure.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ProduseEco\bin\ClientApp.Infrastructure.pdb
