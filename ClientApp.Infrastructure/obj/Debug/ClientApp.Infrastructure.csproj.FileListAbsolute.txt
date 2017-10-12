@@ -1,0 +1,9 @@
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\ClientApp.Infrastructure.dll.config
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\ClientApp.Infrastructure.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\ClientApp.Infrastructure.pdb
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\obj\Debug\ClientApp.Infrastructure.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\ProduseEco\ClientApp.Infrastructure\obj\Debug\ClientApp.Infrastructure.pdb
