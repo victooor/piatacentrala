@@ -3,3 +3,12 @@
 ################################################################################
 
 /packages
+/.vs/
+/bin/
+/obj/
+/ProduseEco/obj/Debug
+/ClientApp.test/obj/Debug
+/ClientApp.test/bin/Debug
+/ClientApp.Infrastructure/obj/Debug
+/ProduseEco.v11.suo
+/ProduseEco/bin/

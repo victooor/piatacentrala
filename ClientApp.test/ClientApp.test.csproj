@@ -98,7 +98,7 @@
   <ItemGroup>
     <Compile Include="TestClientRepository.cs" />
     <Compile Include="ClientRepositoryTest.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ClientControllerUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
