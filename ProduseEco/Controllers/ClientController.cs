@@ -20,17 +20,16 @@ namespace ProduseEco.Controllers
         }
 
         [HttpGet]
-
         public ActionResult AddOrEdit(int Id=0 )
         {
             ClientViewModel clientModel = new ClientViewModel();
             return View(clientModel);
         }
+
         [HttpPost]
         public ActionResult AddOrEdit(ClientViewModel clientModel)
         {
-
-
+            
             Client dbClient = repository.FindByUsername(clientModel.Username);
             if(dbClient != null) { 
                 ViewBag.DuplicateMessage = "Username already exit.";

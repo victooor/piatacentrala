@@ -49,7 +49,9 @@
                 <tr>
                     <td></td>
                     <td>
-                        <input class="btn btn-default" type="submit" value="Login" />
+						<button type="submit" value="Login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+							Login
+						</button>
                         <input class="btn btn-default" type="reset" name="name" value="Clear" />
                         <input class="btn btn-default" type="button" value="Register" onclick="@("window.location.href='" + @Url.Action("AddOrEdit", "Client") + "'");" />
 
